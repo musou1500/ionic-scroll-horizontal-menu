@@ -1,0 +1,16 @@
+page-menu {
+  .scrollable-segments {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+  }
+
+  .toolbar-ios-danger .segment-ios .segment-button {
+    border-radius: 0;
+  }
+
+  button {
+    position: relative;
+  }
+}

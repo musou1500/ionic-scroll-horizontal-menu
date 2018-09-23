@@ -1,0 +1,38 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>hogefuga</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides (ionSlideDidChange)="slideChanged()">
+    <ion-slide *ngFor="let item of menu;">
+      <h1>{{ item.name }}</h1>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar no-border>
+    <div class="scrollable-segments" #scrollMenu>
+      <button ion-button [color]="i === itemSelected ? 'royal' : 'dark'" *ngFor="let item of menu; index as i" clear #menuButton
+        (click)="select(i)" icon-start>
+        <ion-icon [name]="item.icon">
+        </ion-icon>
+        {{ item.name }}
+      </button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
